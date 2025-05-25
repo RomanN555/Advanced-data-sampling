@@ -24,7 +24,8 @@ CREATE TABLE Album (
 );
 
 ALTER TABLE Album
-	ADD COLUMN artist_id INT REFERENCES Artist(id);
+DROP COLUMN artist_id CASCADE;
+
 
 CREATE TABLE Track (
     id SERIAL PRIMARY KEY,

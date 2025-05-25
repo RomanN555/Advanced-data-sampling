@@ -27,10 +27,6 @@ INSERT INTO Album (title, release_year) VALUES
 ('1989', 2014),
 ('Evolve', 2017);
 
-UPDATE Album SET artist_id = 1 WHERE title = 'After Hours';
-UPDATE Album SET artist_id = 4 WHERE title = '1989';
-UPDATE Album SET artist_id = 3 WHERE title = 'Evolve';
-
 INSERT INTO Track (title, duration, album_id) VALUES
 ('Blinding Lights', '00:03:20', 1),
 ('Save Your Tears', '00:03:36', 1),
@@ -38,6 +34,25 @@ INSERT INTO Track (title, duration, album_id) VALUES
 ('Blank Space', '00:03:58', 2),
 ('Believer', '00:03:24', 3),
 ('Thunder', '00:03:07', 3);
+
+INSERT INTO Track (title, duration, album_id) VALUES 
+('my own', '00:04:00', 1),
+('own my', '00:04:00', 1),
+('my', '00:04:00', 3),
+('oh my god', '00:04:00', 3),
+('myself', '00:04:00', 2),
+('by myself', '00:04:00', 3),
+('bemy self', '00:04:00', 1),
+('by myself by', '00:04:00', 2),
+('beemy', '00:04:00', 3),
+('premyne', '00:04:00', 2);
+
+INSERT INTO Track (title, duration, album_id) VALUES 
+('Мой', '00:04:00', 1),
+('мой автомобиль', '00:04:00', 1),
+('может быть пойти на завод все же?', '00:04:00', 3);
+
+
 
 INSERT INTO Collection (title) VALUES
 ('Top Hits 2020'),
