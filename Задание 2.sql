@@ -14,22 +14,18 @@ SELECT name
 FROM Artist
 WHERE name NOT LIKE '% %'; 
 
-SELECT DISTINCT title, id 
+SELECT DISTINCT title, id
 FROM Track
-WHERE 
-    title ILIKE 'my'           
-    OR title ILIKE 'my %'      
-    OR title ILIKE '% my'      
-    OR title ILIKE '% my %'    
-    OR title ILIKE '% my'      
-    OR title ILIKE 'my %'; 
+WHERE
+  title ILIKE 'my'
+  OR title ILIKE 'my %'
+  OR title ILIKE '% my'
+  OR title ILIKE '% my %';
 
-SELECT DISTINCT title, id 
+SELECT DISTINCT title, id
 FROM Track
-WHERE 
-    title ILIKE 'мой%'    
-    OR title ILIKE '%мой'  
-    OR title ILIKE '%мой%'  
-    OR title ILIKE ' мой'     
-    OR title ILIKE 'мой '     
-    OR title ILIKE ' мой'; 
+WHERE
+  title ILIKE 'мой'
+  OR title ILIKE 'мой %'
+  OR title ILIKE '% мой'
+  OR title ILIKE '% мой %';

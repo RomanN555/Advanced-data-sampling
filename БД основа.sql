@@ -23,10 +23,6 @@ CREATE TABLE Album (
     release_year INT
 );
 
-ALTER TABLE Album
-DROP COLUMN artist_id CASCADE;
-
-
 CREATE TABLE Track (
     id SERIAL PRIMARY KEY,
     title VARCHAR(200) NOT NULL,

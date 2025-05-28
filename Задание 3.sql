@@ -29,14 +29,19 @@ GROUP BY
 SELECT 
 	a.name AS Artist_name
 FROM 
-	Album al
-JOIN 
-	AlbumArtists aa ON al.id = aa.album_id
-JOIN 
-	Artist a ON aa.artist_id = a.id
+	Artist a
 WHERE 
-	al.release_year = 2020
+	a.id NOT IN (
+    SELECT 
+    	 aa.artist_id
+    FROM 
+   		 AlbumArtists aa
+    JOIN 
+    	Album al ON al.id = aa.album_id
+    WHERE 
+    	al.release_year = 2020
 
+);
 
 SELECT DISTINCT 
 	c.title AS collection_name
